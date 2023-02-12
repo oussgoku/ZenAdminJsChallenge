@@ -1,5 +1,6 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import axios from 'axios';
+import Movies from '../Movies/Movies';
 
 const Search = () => {
     //declaring variables
@@ -23,34 +24,43 @@ const Search = () => {
 
                 } else {
                     console.log("we are in the else");
-                    console.log("display results", results);
-                    setResults(res.data.search);
+                    setResults(res.data.Search);
+                    console.log("display results", res.data.Search);
+
                 }
             })
             .catch((err) => console.log(err));
     };
     const handleChange = (e) => {
         setSearchTerm(e.target.value);
+        console.log("search Tearm:", e.target.value);
     };
+
+    useEffect(() => {
+        console.log('useeffect');
+
+    }, [results]);
+
 
 
 
     return (
         <div className="container">
-            <div className="col-md-6">
-                <form action="">
-
-                    <input type="text"
-                        value={searchTerm}
+            
+            <div class="mx-2 row mt-3">
+                <form id="search" class="form-inline">
+                    <label class="sr-only" for="inlineFormInputName2">Name</label>
+                    <input type="text" value={searchTerm}
                         name="searchTerm"
-                        className='form-control'
-                        onChange={(handleChange)}
-                    />
-                    <button type="submit" className="btn btn-secondary" onClick={(handleSubmit)}>
-                        Search
-                    </button>
+                        onChange={(handleChange)} className="form-control mb-2 mr-sm-2" id="search-input" placeholder="search name ..." />
+                    <button type="submit" class="btn btn-primary mb-2" id="search-btn" onClick={(handleSubmit)}>Search</button>
                 </form>
             </div>
+            {
+                results.length > 0 &&
+
+                <Movies movies={results} />
+            }
         </div>
     );
 }

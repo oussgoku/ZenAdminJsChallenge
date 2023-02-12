@@ -1,14 +1,16 @@
-import logo from './logo.svg';
-import './App.css';
-import Search from './components/SearchComponent/SearchComponent';
+import React from 'react';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Home from './components/Home/Home';
+import MovieDetails from './components/MovieDetails/MovieDetails';
 
-function App() {
+const App = () => {
   return (
-    <div className="App">
-     <Home />
-    </div>
+    <BrowserRouter>
+      <Routes>
+        <Route exact path="/" element={<Home />} />
+        <Route exact path="/movie/:movieId" element={<MovieDetails />} />
+      </Routes>
+    </BrowserRouter>
   );
-}
-
+};
 export default App;

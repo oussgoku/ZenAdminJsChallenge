@@ -25,16 +25,16 @@ const Movies = (props) => {
                         return (
 
 
-                            <div class="col-md-6 col-lg-3">
-                                <div class="card mb-2">
+                            <div className="col-md-6 col-lg-3">
+                                <div className="card mb-2">
                                     <img className="card-img-top myimg" src={movie.Poster} alt={movie.Poster} />
-                                    <div class="card-body movie-item-body">
-                                        <h5 class="card-title name">{movie.Title}</h5>
+                                    <div className="card-body movie-item-body">
+                                        <h5 className="card-title name">{movie.Title}</h5>
                                     </div>
 
 
-                                    <div class="card-footer">
-                                        <button class="btn btn-primary btn-show-movie" data-toggle="modal" data-target="#show-movie-modal" key={movie.imdbID} onClick={() => handleSelect(movie)}>More</button>
+                                    <div className="card-footer">
+                                        <button className="btn btn-primary btn-show-movie" data-toggle="modal" data-target="#show-movie-modal" key={movie.imdbID} onClick={() => handleSelect(movie)}>More</button>
                                     </div>
                                 </div>
                             </div>

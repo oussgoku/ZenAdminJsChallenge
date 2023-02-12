@@ -47,13 +47,13 @@ const Search = () => {
     return (
         <div className="container">
             
-            <div class="mx-2 row mt-3">
-                <form id="search" class="form-inline">
-                    <label class="sr-only" for="inlineFormInputName2">Name</label>
+            <div className="mx-2 row mt-3">
+                <form id="search" className="form-inline">
+                    <label className="sr-only" htmlFor="inlineFormInputName2">Name</label>
                     <input type="text" value={searchTerm}
                         name="searchTerm"
                         onChange={(handleChange)} className="form-control mb-2 mr-sm-2" id="search-input" placeholder="search name ..." />
-                    <button type="submit" class="btn btn-primary mb-2" id="search-btn" onClick={(handleSubmit)}>Search</button>
+                    <button type="submit" className="btn btn-primary mb-2" id="search-btn" onClick={(handleSubmit)}>Search</button>
                 </form>
             </div>
             {

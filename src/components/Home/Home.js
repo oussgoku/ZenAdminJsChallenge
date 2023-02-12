@@ -1,13 +1,12 @@
 import React from 'react'
 import Search from '../SearchComponent/SearchComponent'
 
-const Home= ()=> {
-   
+const Home = () => {
+
     return (
         <div>
-
             <Search />
-            
+
         </div>
     )
 }

@@ -1,6 +1,10 @@
-# Getting Started with Create React App
+# Movies Web Application
+This repository contains the React project I have developed for the coding test for ZenAdmin.The project is a Movie web application  that allows users to fetch for a film by its name and see its details. This project was bootstrapped with Create React App.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## The following operations are supported:
+Fetch for a film by name or Id
+display  the details of the film
+
 
 ## Available Scripts
 
